@@ -1,6 +1,10 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #e6e8ed;
+    color: #666666;
+    font-family: "Montserrat", sans-serif;
 }
 
 .grid-container {
@@ -18,7 +22,12 @@ body {
 .header {
     grid-area: header;
     height: 70px;
-    background-color: lightyellow;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
 
 /* -- SIDERBAR -- */
@@ -26,12 +35,17 @@ body {
 #sidebar {
     grid-area: sidebar;
     height: 100%;
-    background-color: lightblue;
+    background-color: #21232d;
+    color: #9799ab;
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 /* -- MAIN -- */
 
 .main-container {
     grid-area: main;
-    background-color: lightgrey;
+    overflow: auto;
+    padding: 20px 20px;
 }
