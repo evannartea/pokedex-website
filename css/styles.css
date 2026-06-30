@@ -1,19 +1,20 @@
 body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #e6e8ed;
-    color: #666666;
-    font-family: "Montserrat", sans-serif;
+    height: 100%;
+
+    background-image: url("../images/pokemon-background.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 260px 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 3fr;
+    background: transparent;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-        "sidebar header header header"
-        "sidebar main main main";
+        "header"
+        "main";
     height: 100vh;
 }
 
@@ -21,31 +22,21 @@ body {
 
 .header {
     grid-area: header;
-    height: 70px;
-    background-color: white;
+    height: 150px;
+    padding: 0 30px;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 30px 0 30px;
-    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-}
-
-/* -- SIDERBAR -- */
-
-#sidebar {
-    grid-area: sidebar;
-    height: 100%;
-    background-color: #21232d;
-    color: #9799ab;
-    overflow-y: auto;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    justify-content: center;
 }
 
 /* -- MAIN -- */
 
 .main-container {
     grid-area: main;
-    overflow: auto;
     padding: 20px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
