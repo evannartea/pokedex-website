@@ -40,3 +40,74 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Pokedex Image */
+
+.pokedex-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.pokedex-wrapper img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Decorations */
+
+.red-circle,
+.black-lines,
+.reset-button {
+    position: absolute;
+}
+
+.red-circle {
+    top: 55%;
+    left: 21%;
+
+    background-color: #d30a40;
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #222021;
+}
+
+.black-lines {
+    top: 55%;
+    right: 27%;
+
+    width: 80px;
+    height: 40px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #222021 0px,
+        #222021 3px,
+        transparent 2px,
+        transparent 10px
+    );
+}
+
+.reset-button {
+    top: 65%;
+    left: 10%;
+
+    background-color: #58595b;
+    height: 50px;
+    width: 50px;
+
+    font-family: 'Jost';
+    font-weight: 700;
+
+    border: none;
+    border-radius: 50%;
+    box-shadow: -3px 2px #252121;
+
+    transition: all 0.1s ease;
+}
+
+.reset-button:active {
+    transform: translate(-3px, 2px);
+    box-shadow: 0 0 #252121;
+}
