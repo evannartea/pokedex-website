@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pokemon Finder</title>
 
+        <!-- Jost Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/styles.css">
     </head>
@@ -14,13 +19,20 @@
 
             <!-- Header -->
             <header class="header">
-                <img src="images/pokemon-logo.svg.png" height="160" width="300">
+                <img src="images/pokemon-logo.svg.png" alt="Pokemon Logo" height="150" width="400">
             </header>
             <!-- End Header -->
             
             <!-- Main -->
             <main class="main-container">
-                <img src="images/pokedex-image.png">
+                <div class="pokedex-wrapper">
+                    <img src="images/pokedex-image.png" alt="Pokedex Image">
+
+                    <!-- Decorations -->
+                    <span class="red-circle"></span>
+                    <span class="black-lines"></span>
+                    <button class="reset-button" type="button">RESET</button>
+                </div>
             </main>
             <!-- End Main -->
 
