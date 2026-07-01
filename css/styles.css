@@ -51,6 +51,20 @@ body {
     height: auto;
 }
 
+/* -- Screen -- */
+
+.screen-wrapper {
+    position: absolute;
+    top: 170px;
+    left: 67px;
+
+    background: transparent;
+    height: 171px;
+    width: 255px;
+
+    border-radius: 10px;
+}
+
 /* -- Decorations -- */
 
 .red-circle,
@@ -116,12 +130,14 @@ body {
     box-shadow: 0 0 0 2px #222021;
 }
 
+/* -- Search Form -- */
+
 .green-screen {
     bottom: 7%;
     left: 15%;
 
     background-color: #3ab549;
-    font-family: 'Press Start 2P';
+    font-family: "Press Start 2P";
     font-size: 15px;
     height: 100px;
     width: 200px;
@@ -139,22 +155,17 @@ body {
     outline: none;
 }
 
-.green-screen::placeholder {
-    color: #222021; /* pick any colour you want */
-    opacity: 1; /* ensures it doesn't look faded in some browsers */
-}
-
 .prompt-text {
     bottom: 18%;
     left: 18%;
 
-    font-family: 'Press Start 2P';
+    font-family: "Press Start 2P";
     font-size: 12px;
 
     z-index: 1;
 }
 
-/* Buttons */
+/* -- Buttons--  */
 
 .reset-button {
     top: 65%;
@@ -164,7 +175,7 @@ body {
     height: 50px;
     width: 50px;
 
-    font-family: 'Jost';
+    font-family: "Jost";
     font-weight: 700;
     color: white;
 
@@ -189,7 +200,7 @@ body {
     height: 25px;
     width: 50px;
 
-    font-family: 'Jost';
+    font-family: "Jost";
     font-weight: 700;
     color: white;
 
@@ -214,7 +225,7 @@ body {
     height: 25px;
     width: 50px;
 
-    font-family: 'Jost';
+    font-family: "Jost";
     font-weight: 700;
     color: white;
 
