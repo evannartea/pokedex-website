@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const previous = document.getElementById("prev-button");
     const next = document.getElementById("next-button");
 
+    const cry = document.getElementById("pokemon-cry");
+
     let pokemonData = [];
+    let currentIndex = -1;
 
     fetch("data/pokemon.json")
         .then(function(response) {
@@ -16,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             pokemonData = data;
         });
 
+    // Form
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
@@ -32,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Pokemon Not Found");
             return;
         };
-
+        
+        // Store stats
         const info = {
             pokedexNumber: result.pokedex_number,
             name: result.name,
@@ -45,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
             spDefense: result.sp_defense,
             speed: result.speed,
         };
-
+        
+        // Format Pokedex Number
         const formattedPokedexNo = `#${String(info.pokedexNumber).padStart(3, "0")}`;
 
         document.getElementById("pokedex-number").textContent = formattedPokedexNo;
@@ -57,36 +63,48 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("sp-defense").textContent = info.spDefense;
         document.getElementById("speed").textContent = info.speed;
 
+        // Get sprites
         document.getElementById("pokemon-sprite").src = 
             `https://projectpokemon.org/images/normal-sprite/${info.name.toLowerCase()}.gif`;
+
+        // Get cries
+        cry.src = `https://play.pokemonshowdown.com/audio/cries/${info.name.toLowerCase()}.mp3`;
+        cry.currentTime = 0;
+        cry.volume = 0.1;
+        cry.play();
 
         input.value = "";
     });
 
-        reset.addEventListener("click", function() {
-            location.reload()
-        });
+    // Reset button
+    reset.addEventListener("click", function() {
+        setTimeout(function() {
+            location.reload();
+        }, 100);
+    });
 
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "ArrowLeft") {
-                previous.classList.add("pressed");
-                previous.click();
-            }
+    // Keydown
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft") {
+            previous.classList.add("pressed");
+            previous.click();
+        }
 
-            if (event.key === "ArrowRight") {
-                next.classList.add("pressed");
-                next.click();
-            }
-        });
+        if (event.key === "ArrowRight") {
+            next.classList.add("pressed");
+            next.click();
+        }
+    });
 
-        document.addEventListener("keyup", function(event) {
-            if (event.key === "ArrowLeft") {
-                previous.classList.remove("pressed");
-            }
+    // Keyup
+    document.addEventListener("keyup", function(event) {
+        if (event.key === "ArrowLeft") {
+            previous.classList.remove("pressed");
+        }
 
-            if (event.key === "ArrowRight") {
-                next.classList.remove("pressed");
-            }
-        });
+        if (event.key === "ArrowRight") {
+            next.classList.remove("pressed");
+        }
+    });
    
 });
