@@ -60,21 +60,44 @@ body {
 
     height: 171px;
     width: 255px;
-    gap: 10px;
     padding: 15px;
+
     background: transparent;
 
     box-sizing: border-box;
     border-radius: 10px;
 
     display: flex;
+    gap: 10px;
+}
+
+/* -- Left Side -- */
+
+.left-screen {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pokemon-sprite {
+    align-self: center;
+}
+
+/* -- Right Side -- */
+
+.right-screen {
+    width: 50%;
+
+    display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .name-bar {
     height: 30px;
     width: 100px;
-    padding: 5px;
+    padding: 3px;
     background-color: whitesmoke;
 
     border-radius: 5px;
@@ -85,6 +108,7 @@ body {
     align-items: center;
     justify-self: center;
     align-self: flex-end;
+    gap: 5px;
 
     font-family: "Press Start 2P";
     font-size: 7px;
@@ -93,7 +117,6 @@ body {
 .stats-bar {
     height: 100px;
     width: 100px;
-    gap: 5px;
     padding: 10px;
     background-color: whitesmoke;
 
@@ -107,6 +130,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
+    gap: 5px;
 }
 
 

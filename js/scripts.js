@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             speed: result.speed,
         };
 
+        document.getElementById("pokedex-number").textContent = info.pokedexNumber;
         document.getElementById("name").textContent = info.name;
         document.getElementById("hp").textContent = info.hp;
         document.getElementById("attack").textContent = info.attack;
@@ -49,6 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("sp-attack").textContent = info.spAttack;
         document.getElementById("sp-defense").textContent = info.spDefense;
         document.getElementById("speed").textContent = info.speed;
+
+        document.getElementById("pokemon-sprite").src = 
+            `https://projectpokemon.org/images/normal-sprite/${info.name.toLowerCase()}.gif`;
 
         input.value = "";
     });
