@@ -36,8 +36,6 @@ def clean_data(db_path):
     for col in ["type1", "type2"]:
         df[col] = df[col].str.capitalize()
 
-    df["pokedex_number"] = df["pokedex_number"].apply(lambda x: f"#{x:03d}")
-
     return df
 
 def main():
