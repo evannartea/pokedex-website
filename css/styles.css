@@ -67,19 +67,11 @@ body {
 
 /* -- Decorations -- */
 
-.red-circle,
-.black-lines,
-.red-line,
-.blue-line,
-.reset-button,
-.left-button,
-.right-button,
-.green-screen,
-.prompt-text {
+.absolute {
     position: absolute;
 }
 
-.red-circle {
+#red-circle {
     top: 55%;
     left: 21%;
 
@@ -91,7 +83,7 @@ body {
     box-shadow: 0 0 0 2px #222021;
 }
 
-.black-lines {
+#black-lines {
     top: 55%;
     right: 27%;
 
@@ -106,7 +98,7 @@ body {
     );
 }
 
-.red-line {
+#red-line {
     top: 66%;
     left: 27%;
 
@@ -118,7 +110,7 @@ body {
     box-shadow: 0 0 0 2px #222021;
 }
 
-.blue-line {
+#blue-line {
     top: 66%;
     left: 44%;
 
@@ -132,8 +124,7 @@ body {
 
 /* -- Search Form -- */
 
-.search-wrapper {
-    position: absolute;
+#search-wrapper {
     bottom: 7%;
     left: 15%;
 
@@ -145,39 +136,35 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 0 2px #222021;
     box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.search-box {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    
+#search-box { 
     width: 170px;
     background: transparent;
     border: none;
     box-sizing: border-box;
 
     font-family: "Press Start 2P";
-    font-size: medium;
+    font-size: 12px;
     caret-color: #222021;
 }
 
-.search-box:focus {
+#search-box:focus {
     outline: none;
 }
 
-.prompt-text {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-
-    font-family: "Press Start 2P";
-    font-size: 10px;
+input::placeholder {
+  color: #222021;
+  opacity: 1;
 }
 
 /* -- Buttons--  */
 
-.reset-button {
+#reset-button {
     top: 65%;
     left: 10%;
 
@@ -197,12 +184,12 @@ body {
     transition: all 0.1s ease;
 }
 
-.reset-button:active {
+#reset-button:active {
     transform: translate(-3px, 2px);
     box-shadow: 0 0 #252121;
 }
 
-.left-button {
+#left-button {
     top: 70%;
     right: 35%;
 
@@ -222,12 +209,12 @@ body {
     transition: all 0.1s ease;
 }
 
-.left-button:active {
+#left-button:active {
     transform: translate(-1px, 2px);
     box-shadow: 0 0 #252121;
 }
 
-.right-button {
+#right-button {
     top: 70%;
     right: 20%;
 
@@ -247,7 +234,7 @@ body {
     transition: all 0.1s ease;
 }
 
-.right-button:active {
+#right-button:active {
     transform: translate(-1px, 2px);
     box-shadow: 0 0 #252121;
 }
