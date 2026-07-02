@@ -17,6 +17,9 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Custom JS -->
+        <script src="js/scripts.js"></script>
     </head>
     <body>
         <div class="grid-container">
@@ -34,7 +37,16 @@
 
                     <!-- Screen -->
                     <div class="screen-wrapper">
-                        
+                        <div id="name" class="name-bar"></div>
+                        <div class="stats-bar">
+                            <div>TYPE: </div>
+                            <div id="hp">HP: </div>
+                            <div id="attack">ATK: </div>
+                            <div id="defense">DEF: </div>
+                            <div id="sp-attack">SpA: </div>
+                            <div id="sp-defense">SpD: </div>
+                            <div id="speed">SPE: </div>
+                        </div>
                     </div>
 
                     <!-- Decorations -->
@@ -45,7 +57,7 @@
 
                     <!--Search Form -->
                     <form id="search-wrapper" class="absolute">
-                        <input id="search-box" class="absolute" type="text" placeholder="SEARCH POKéMON">
+                        <input id="search-box" type="text" placeholder="SEARCH POKéMON">
                     </form>
 
                     <!-- Buttons -->
@@ -57,8 +69,5 @@
             <!-- End Main -->
              
         </div>
-
-        <!-- Custom JS -->
-        <script src=""></script>
     </body>
 </html>
