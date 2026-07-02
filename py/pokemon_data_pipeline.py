@@ -41,6 +41,7 @@ def clean_data(db_path):
         df["name"]
         .str.replace("♀", "_f", regex=False)
         .str.replace("♂", "_m", regex=False)
+        .str.replace("Mr. Mime", "Mr.Mime", regex=False)
     )
 
     return df

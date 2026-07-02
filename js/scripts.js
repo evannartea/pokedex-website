@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
             speed: result.speed,
         };
 
-        document.getElementById("pokedex-number").textContent = info.pokedexNumber;
+        const formattedPokedexNo = `#${String(info.pokedexNumber).padStart(3, "0")}`;
+
+        document.getElementById("pokedex-number").textContent = formattedPokedexNo;
         document.getElementById("name").textContent = info.name;
         document.getElementById("hp").textContent = info.hp;
         document.getElementById("attack").textContent = info.attack;
@@ -56,4 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         input.value = "";
     });
+
+    document.getElementById("reset-button").addEventListener("click", function () {
+            location.reload()
+        })
 });
