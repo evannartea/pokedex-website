@@ -1,23 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("search-wrapper");
     const input = document.getElementById("search-box");
+    
+    const reset = document.getElementById("reset-button");
+    const previous = document.getElementById("prev-button");
+    const next = document.getElementById("next-button");
 
     let pokemonData = [];
 
     fetch("data/pokemon.json")
-        .then(function (response) {
+        .then(function(response) {
             return response.json();
         })
         .then(function (data) {
             pokemonData = data;
         });
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const query = input.value.trim().toLowerCase();
 
-        const result = pokemonData.find(function (pokemon) {
+        const result = pokemonData.find(function(pokemon) {
             return (
                 pokemon.name.toLowerCase() === query ||
                 String(pokemon.pokedex_number) === query
@@ -27,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!result) {
             console.log("Pokemon Not Found");
             return;
-        }
+        };
 
         const info = {
             pokedexNumber: result.pokedex_number,
@@ -59,7 +63,30 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = "";
     });
 
-    document.getElementById("reset-button").addEventListener("click", function () {
+        reset.addEventListener("click", function() {
             location.reload()
-        })
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "ArrowLeft") {
+                previous.classList.add("pressed");
+                previous.click();
+            }
+
+            if (event.key === "ArrowRight") {
+                next.classList.add("pressed");
+                next.click();
+            }
+        });
+
+        document.addEventListener("keyup", function(event) {
+            if (event.key === "ArrowLeft") {
+                previous.classList.remove("pressed");
+            }
+
+            if (event.key === "ArrowRight") {
+                next.classList.remove("pressed");
+            }
+        });
+   
 });

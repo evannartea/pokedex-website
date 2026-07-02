@@ -269,7 +269,7 @@ input::placeholder {
     box-shadow: 0 0 #252121;
 }
 
-#left-button {
+#prev-button {
     top: 70%;
     right: 35%;
 
@@ -288,12 +288,17 @@ input::placeholder {
     transition: all 0.1s ease;
 }
 
-#left-button:active {
+#prev-button:active {
     transform: translate(-1px, 2px);
     box-shadow: 0 0 #252121;
 }
 
-#right-button {
+#prev-button.pressed {
+    transform: translate(-1px, 2px);
+    box-shadow: 0 0 #252121;
+}
+
+#next-button {
     top: 70%;
     right: 20%;
 
@@ -312,7 +317,12 @@ input::placeholder {
     transition: all 0.1s ease;
 }
 
-#right-button:active {
+#next-button:active {
+    transform: translate(-1px, 2px);
+    box-shadow: 0 0 #252121;
+}
+
+#next-button.pressed {
     transform: translate(-1px, 2px);
     box-shadow: 0 0 #252121;
 }
