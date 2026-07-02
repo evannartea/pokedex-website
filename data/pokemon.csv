@@ -443,7 +443,7 @@ abilities,against_bug,against_dark,against_dragon,against_electric,against_fairy
 "['Pressure', 'Infiltrator']",1,1,1,1,2,0,1,1,1,1,1,1,0,0.5,0,1,1,1,92,7680,70,485,100,Forbidden Pokémon,108,1000000,1.0,50,Mikarugeミカルゲ,Spiritomb,50,442,92,108,35,ghost,dark,108.0,4,0
 "['Sand Veil', 'Rough Skin']",1,1,2,0,2,1,0.5,1,1,1,1,4,1,0.5,1,0.5,1,1,70,10240,70,300,45,Land Shark Pokémon,45,1250000,0.7,58,Fukamaruフカマル,Gible,50,443,40,45,42,dragon,ground,20.5,4,0
 "['Sand Veil', 'Rough Skin']",1,1,2,0,2,1,0.5,1,1,1,1,4,1,0.5,1,0.5,1,1,90,10240,70,410,45,Cave Pokémon,65,1250000,1.4,68,Gabiteガバイト,Gabite,50,444,50,55,82,dragon,ground,56.0,4,0
-"['Sand Veil', 'Rough Skin']",1,1,2,0,2,1,0.5,1,1,1,1,4,1,0.5,1,0.5,1,1,170,10240,70,700,45,Mach Pokémon,115,1250000,1.9,108,Gaburiasガブリアス,Garchomp,50,445,120,95,92,dragon,ground,95.0,4,0
+"['Sand Veil', 'Rough Skin']",1,1,2,0,2,1,0.5,1,1,1,1,4,1,0.5,1,0.5,1,1,130,10240,70,700,45,Mach Pokémon,95,1250000,1.9,108,Gaburiasガブリアス,Garchomp,50,445,80,85,102,dragon,ground,95.0,4,0
 "['Pickup', 'Thick Fat', 'Gluttony']",1,1,1,1,1,2,1,1,0,1,1,1,1,1,1,1,1,1,85,10240,70,390,50,Big Eater Pokémon,40,1250000,0.6,135,Gonbeゴンベ,Munchlax,88.1,446,40,85,5,normal,,105.0,4,0
 "['Steadfast', 'Inner Focus', 'Prankster']",0.5,0.5,1,1,2,1,1,2,1,1,1,1,1,1,2,0.5,1,1,70,6400,70,285,75,Emanation Pokémon,40,1059860,0.7,40,Rioluリオル,Riolu,88.1,447,35,40,60,fighting,,20.2,4,0
 "['Steadfast', 'Inner Focus', 'Justified']",0.25,0.5,0.5,1,1,2,2,1,1,0.5,2,0.5,0.5,0,1,0.25,0.5,1,145,6400,70,625,45,Aura Pokémon,88,1059860,1.2,70,Lucarioルカリオ,Lucario,88.1,448,140,70,112,fighting,steel,54.0,4,0
