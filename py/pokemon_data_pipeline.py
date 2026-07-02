@@ -36,6 +36,13 @@ def clean_data(db_path):
     for col in ["type1", "type2"]:
         df[col] = df[col].str.capitalize()
 
+    # Fix Nidoran gender symbols
+    df["name"] = (
+        df["name"]
+        .str.replace("♀", "_f", regex=False)
+        .str.replace("♂", "_m", regex=False)
+    )
+
     return df
 
 def main():
