@@ -24,7 +24,7 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 - Better display structure in CSS using grid containers.
 - Navigating how to fetch data from RESTful API.
 
-### Credits
+### 📄 Credits
 #
 **Author:** Evan Nartea
 <br>
