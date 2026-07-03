@@ -22,7 +22,7 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 #
 - Used JavaScript to add functionality to a website.
 - Learned how to handle user input using HTML form and input elements.
-- Improved my understanding of CSS Grid to create better-structured layouts.
+- Improved my understanding of CSS Grid and Flexbox to create better-structured layouts.
 - Leearned how to fetch and work with data from a RESTful API.
 - Gained experience with version control using Git commands.
 
