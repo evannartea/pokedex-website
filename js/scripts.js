@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Get sprites
-            pokemonSprite.src = `https://projectpokemon.org/images/normal-sprite/${pokemon.name.toLowerCase()}.gif`;
+            pokemonSprite.src = pokemon.sprites.other.showdown.front_default;
 
             // Get cries
             pokemonCry.src = pokemon.cries.legacy;
