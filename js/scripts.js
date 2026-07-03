@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("search-wrapper");
     const input = document.getElementById("search-box");
-    
+
     const reset = document.getElementById("reset-button");
     const previous = document.getElementById("prev-button");
     const next = document.getElementById("next-button");
@@ -16,85 +16,65 @@ document.addEventListener("DOMContentLoaded", function () {
     const speed = document.getElementById("speed");
 
     const type1Icon = document.getElementById("type1");
-    const type12Icon = document.getElementById("type2");
+    const type2Icon = document.getElementById("type2");
     const pokemonSprite = document.getElementById("pokemon-sprite");
-    const cry = document.getElementById("pokemon-cry");
+    const pokemonCry = document.getElementById("pokemon-cry");
+    
+    // Fetch data
+    async function getPokemon(query) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${query}`
 
-    let pokemonData = [];
-    let currentIndex = -1;
+        try {
+            const response = await fetch(url)
 
-    fetch("data/pokemon.json")
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function (data) {
-            pokemonData = data;
-        });
+            // Check response is ok
+            if(!response.ok) {
+                throw new Error("Could not fetch resource");
+            }
 
-    // Form
-    form.addEventListener("submit", function(event) {
+            const data = await response.json();
+            return data;
+        }
+        catch(error) {
+            console.error(error);
+        }
+    }
+
+    // Return Pokemon after user input
+    form.addEventListener("submit", async function(event) {
         event.preventDefault();
 
         const query = input.value.trim().toLowerCase();
 
-        const result = pokemonData.find(function(pokemon) {
-            return (
-                pokemon.name.toLowerCase() === query ||
-                String(pokemon.pokedex_number) === query
-            );
-        });
+        const pokemon = await getPokemon(query);
 
-        if (!result) {
-            console.log("Pokemon Not Found");
-            return;
-        };
-        
-        // Store stats
-        const info = {
-            pokedexNumber: result.pokedex_number,
-            name: result.name,
-            type1: result.type1,
-            type2: result.type2,
-            hp: result.hp,
-            attack: result.attack,
-            defense: result.defense,
-            spAttack: result.sp_attack,
-            spDefense: result.sp_defense,
-            speed: result.speed,
-        };
-        
-        // Format Pokedex Number
-        const formattedPokedexNo = `#${String(info.pokedexNumber).padStart(3, "0")}`;
+        if (pokemon) {
 
-        pokedexNo.textContent = formattedPokedexNo;
-        name.textContent = info.name;
-        hp.textContent = info.hp;
-        attack.textContent = info.attack;
-        defense.textContent = info.defense;
-        spAttack.textContent = info.spAttack;
-        spDefense.textContent = info.spDefense;
-        speed.textContent = info.speed;
+            // Return text content for HTML
 
-        // Get types
-        type1Icon.src = `images/types/${info.type1.toLowerCase()}IC_DPPt.png`;
+            // Get stats
+            pokedexNo.textContent = `#${String(pokemon.id).padStart(3, "0")}`;
+            name.textContent = pokemon.name;
+            hp.textContent = pokemon.stats[0].base_stat;
+            attack.textContent = pokemon.stats[1].base_stat;
+            defense.textContent = pokemon.stats[2].base_stat;
+            spAttack.textContent = pokemon.stats[3].base_stat;
+            spDefense.textContent = pokemon.stats[4].base_stat;
+            speed.textContent = pokemon.stats[5].base_stat;
 
-        if (info.type2) {
-            type12Icon.src = `images/types/${info.type2.toLowerCase()}IC_DPPt.png`;
-            type12Icon.style.display = "inline-block"; 
-        } else {
-            type12Icon.style.display = "none";
-        }   
+            // Get types
+            type1Icon.src = `images/types/${pokemon.types[0].type.name}IC_DDPt.png`;
+            type2Icon.src = `images/types/${pokemon.types[1].type.name}IC_DDPt.png`;
 
-        // Get sprites
-        pokemonSprite.src = `https://projectpokemon.org/images/normal-sprite/${info.name.toLowerCase()}.gif`;
+            // Get sprites
+            pokemonSprite.src = `https://projectpokemon.org/images/normal-sprite/${pokemon.name.toLowerCase()}.gif`;
 
-        // Get cries
-        cry.src = `https://play.pokemonshowdown.com/audio/cries/${info.name.toLowerCase()}.mp3`;
-        cry.currentTime = 0;
-        cry.volume = 0.1;
-        cry.play();
-
-        input.value = "";
+            // Get cries
+            pokemonCry.src = pokemon.cries.legacy;
+            pokemonCry.currentTime = 0;
+            pokemonCry.volume = 0.1;
+            pokemonCry.play();
+        }
     });
 
     // Reset button
@@ -127,5 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
             next.classList.remove("pressed");
         }
     });
-   
 });
+
+// Add functionality to prev + next buttons
+// Fix search box error handling for invalid pokemon query
+// Fix edge cases - fairy types, weird characters in names
