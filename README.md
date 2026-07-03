@@ -31,6 +31,8 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 **Contributors:** Evan Nartea
 <br>
 <br>
-All Pokémon information taken from: https://pokeapi.co
+Pokémon information: https://pokeapi.co
 <br>
-Project was inspired by: https://github.com/MilenaMartini/pokedexJs
+Pokémon type icons: https://archives.bulbagarden.net/wiki/Category:Type_icons
+<br>
+This project was inspired by: https://github.com/MilenaMartini/pokedexJs
