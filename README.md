@@ -16,7 +16,8 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 
 ### 📷 Example
 #
-<img width="1710" height="983" alt="screenshot_searched" src="https://github.com/user-attachments/assets/a68bafc6-acb1-4057-807c-b42cfd38c65f" />
+<img width="1710" height="982" alt="screenshot_searched" src="https://github.com/user-attachments/assets/a1e0da2f-c2b4-474b-86ec-355308d9aaae" />
+
 
 ### 🎯 What I Learned
 #
