@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const previous = document.getElementById("prev-button");
     const next = document.getElementById("next-button");
 
+    const pokedexNo = document.getElementById("pokedex-number");
+    const name = document.getElementById("name");
+    const hp = document.getElementById("hp");
+    const attack = document.getElementById("attack");
+    const defense = document.getElementById("defense");
+    const spAttack = document.getElementById("sp-attack");
+    const spDefense = document.getElementById("sp-defense");
+    const speed = document.getElementById("speed");
+
+    const type1Icon = document.getElementById("type1");
+    const type12Icon = document.getElementById("type2");
+    const pokemonSprite = document.getElementById("pokemon-sprite");
     const cry = document.getElementById("pokemon-cry");
 
     let pokemonData = [];
@@ -54,24 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
         // Format Pokedex Number
         const formattedPokedexNo = `#${String(info.pokedexNumber).padStart(3, "0")}`;
 
-        document.getElementById("pokedex-number").textContent = formattedPokedexNo;
-        document.getElementById("name").textContent = info.name;
-        document.getElementById("hp").textContent = info.hp;
-        document.getElementById("attack").textContent = info.attack;
-        document.getElementById("defense").textContent = info.defense;
-        document.getElementById("sp-attack").textContent = info.spAttack;
-        document.getElementById("sp-defense").textContent = info.spDefense;
-        document.getElementById("speed").textContent = info.speed;
+        pokedexNo.textContent = formattedPokedexNo;
+        name.textContent = info.name;
+        hp.textContent = info.hp;
+        attack.textContent = info.attack;
+        defense.textContent = info.defense;
+        spAttack.textContent = info.spAttack;
+        spDefense.textContent = info.spDefense;
+        speed.textContent = info.speed;
 
         // Get types
-        document.getElementById("type1").src = 
-            `https://archives.bulbagarden.net/wiki/Special:FilePath/${info.type1}IC_DPPt.png`;
-        document.getElementById("type2").src = 
-            `https://archives.bulbagarden.net/wiki/Special:FilePath/${info.type2}IC_DPPt.png`;
+        type1Icon.src = `images/types/${info.type1.toLowerCase()}IC_DPPt.png`;
+
+        if (info.type2) {
+            type12Icon.src = `images/types/${info.type2.toLowerCase()}IC_DPPt.png`;
+            type12Icon.style.display = "inline-block"; 
+        } else {
+            type12Icon.style.display = "none";
+        }   
 
         // Get sprites
-        document.getElementById("pokemon-sprite").src = 
-            `https://projectpokemon.org/images/normal-sprite/${info.name.toLowerCase()}.gif`;
+        pokemonSprite.src = `https://projectpokemon.org/images/normal-sprite/${info.name.toLowerCase()}.gif`;
 
         // Get cries
         cry.src = `https://play.pokemonshowdown.com/audio/cries/${info.name.toLowerCase()}.mp3`;
