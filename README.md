@@ -30,6 +30,7 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 <br>
 **Contributors:** Evan Nartea
 <br>
+<br>
 All Pokémon information taken from: https://pokeapi.co
 <br>
 Project was inspired by: https://github.com/MilenaMartini/pokedexJs
