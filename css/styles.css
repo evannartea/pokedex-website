@@ -71,7 +71,7 @@ body {
     gap: 10px;
 }
 
-/* -- Left Side -- */
+/* ----- Left Side ----- */
 
 .left-screen {
     width: 50%;
@@ -84,7 +84,7 @@ body {
     align-self: center;
 }
 
-/* -- Right Side -- */
+/* ----- Right Side ----- */
 
 .right-screen {
     width: 50%;
@@ -139,6 +139,10 @@ body {
     align-items: center;
 }
 
+.type-icon {
+    height: 25px;
+    width: 25px;
+}
 
 /* ---------- Decorations ---------- */
 
@@ -245,6 +249,8 @@ input::placeholder {
 
 /* ---------- Buttons----------  */
 
+/* ----- Reset ----- */
+
 #reset-button {
     top: 65%;
     left: 10%;
@@ -268,6 +274,8 @@ input::placeholder {
     transform: translate(-3px, 2px);
     box-shadow: 0 0 #252121;
 }
+
+/* ----- Previous ----- */
 
 #prev-button {
     top: 70%;
@@ -297,6 +305,8 @@ input::placeholder {
     transform: translate(-1px, 2px);
     box-shadow: 0 0 #252121;
 }
+
+/* ----- Next ----- */
 
 #next-button {
     top: 70%;

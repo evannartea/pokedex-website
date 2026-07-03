@@ -63,6 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("sp-defense").textContent = info.spDefense;
         document.getElementById("speed").textContent = info.speed;
 
+        // Get types
+        document.getElementById("type1").src = 
+            `https://archives.bulbagarden.net/wiki/Special:FilePath/${info.type1}IC_DPPt.png`;
+        document.getElementById("type2").src = 
+            `https://archives.bulbagarden.net/wiki/Special:FilePath/${info.type2}IC_DPPt.png`;
+
         // Get sprites
         document.getElementById("pokemon-sprite").src = 
             `https://projectpokemon.org/images/normal-sprite/${info.name.toLowerCase()}.gif`;
