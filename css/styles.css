@@ -96,7 +96,7 @@ body {
 
 .name-bar {
     height: 30px;
-    width: 100px;
+    width: 108px;
     padding: 5px;
     background-color: whitesmoke;
 
@@ -111,12 +111,12 @@ body {
     gap: 5px;
 
     font-family: "Press Start 2P";
-    font-size: 6px;
+    font-size: 6.5px;
 }
 
 .stats-bar {
     height: 100px;
-    width: 100px;
+    width: 108px;
     padding: 10px;
     background-color: whitesmoke;
 
