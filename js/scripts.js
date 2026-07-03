@@ -63,8 +63,14 @@ document.addEventListener("DOMContentLoaded", function() {
             speed.textContent = pokemon.stats[5].base_stat;
 
             // Get types
-            type1Icon.src = `images/types/${pokemon.types[0].type.name}IC_DDPt.png`;
-            type2Icon.src = `images/types/${pokemon.types[1].type.name}IC_DDPt.png`;
+            type1Icon.src = `images/types/${pokemon.types[0].type.name}IC_DPPt.png`;
+
+            if (pokemon.types[1]) {
+                type2Icon.src = `images/types/${pokemon.types[1].type.name}IC_DPPt.png`;
+            }
+            else {
+                type2Icon.style.display = "none";
+            }
 
             // Get sprites
             pokemonSprite.src = `https://projectpokemon.org/images/normal-sprite/${pokemon.name.toLowerCase()}.gif`;
