@@ -112,6 +112,7 @@ body {
 
     font-family: "Press Start 2P";
     font-size: 6.5px;
+    text-transform: uppercase;
 }
 
 .stats-bar {
@@ -140,8 +141,8 @@ body {
 }
 
 .type-icon {
-    height: 25px;
-    width: 25px;
+    height: 27px;
+    width: 27px;
 }
 
 /* ---------- Decorations ---------- */
@@ -217,6 +218,7 @@ body {
     box-sizing: border-box;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -231,6 +233,8 @@ body {
     font-family: "Press Start 2P";
     font-size: 11px;
     caret-color: #222021;
+
+    align-self: center;
 }
 
 #search-box:focus {

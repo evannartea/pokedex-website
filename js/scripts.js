@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("search-wrapper");
     const input = document.getElementById("search-box");
+    const searchError = document.getElementById("search-error");
 
     const reset = document.getElementById("reset-button");
     const previous = document.getElementById("prev-button");
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Render pokemon
     async function getPokemon(query) {
         const pokemon = await fetchData(query);
-
+        
         if (!pokemon) return;
 
         currentId = pokemon.id;
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         pokemonCry.play();
     }
 
-    // Return Pokemon after user search
+    // Return Pokemon after user input
     form.addEventListener("submit", async function(event) {
         event.preventDefault();
 
@@ -135,5 +136,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-// Fix search box error handling for invalid pokemon query
