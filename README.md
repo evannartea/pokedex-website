@@ -7,6 +7,7 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ### 📌 Project Overview
 #
@@ -19,10 +20,11 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 
 ### 🎯 What I Learned
 #
-- Using JavaScript to add functionality to a website.
-- Handling user input with form and input in HTML.
-- Better display structure in CSS using grid containers.
-- Navigating how to fetch data from RESTful API.
+- Used JavaScript to add functionality to a website.
+- Learned how to handle user input using HTML form and input elements.
+- Improved my understanding of CSS Grid for better structured layouts.
+- Leearned how to fetch and work with data from a RESTful API.
+- Gained experience with version control using Git commands.
 
 ### 📄 Credits
 #
