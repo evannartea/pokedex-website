@@ -74,7 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Get sprites
-        pokemonSprite.src = pokemon.sprites.other.showdown.front_default;
+        pokemonSprite.src = 
+            pokemon.sprites.other.showdown.front_default ??
+            pokemon.sprites.front_default;
 
         // Get cries
         pokemonCry.src = pokemon.cries.latest;
