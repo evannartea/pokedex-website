@@ -93,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function() {
         bgMusic.pause();
         bgMusic.currentTime = 0;
 
+        pokedexNo.textContent= "";
+        
         name.textContent = "King of Pop"
         hp.textContent = "MAX"
         attack.textContent = "MAX"
