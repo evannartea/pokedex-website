@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("search-wrapper");
     const input = document.getElementById("search-box");
-    const searchError = document.getElementById("search-error");
 
     const reset = document.getElementById("reset-button");
     const previous = document.getElementById("prev-button");
