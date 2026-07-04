@@ -83,11 +83,10 @@ body {
 }
 
 #pokemon-sprite {
-    max-width: 100px;
-    max-height: 100px;
-
     height: auto;
     width: auto;
+    max-height: 100px;
+    max-width: 100px;
 
     object-fit: contain;
 }

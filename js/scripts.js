@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
     async function getPokemon(query) {
         const pokemon = await fetchData(query);
         
-        if (!pokemon) return;
+        if (!pokemon)
+            return;
 
         currentId = pokemon.id;
 
@@ -78,9 +79,10 @@ document.addEventListener("DOMContentLoaded", function() {
             pokemon.sprites.front_default;
 
         // Get cries
-        pokemonCry.src = pokemon.cries.latest;
+        pokemonCry.src = 
+            pokemon.cries.legacy ??
+            pokemon.cries.latest;
         pokemonCry.currentTime = 0;
-        pokemonCry.volume = 0.1;
         pokemonCry.play();
     }
 
