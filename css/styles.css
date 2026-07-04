@@ -60,7 +60,6 @@ body {
 
     height: 171px;
     width: 255px;
-    padding: 15px;
 
     background: transparent;
 
@@ -79,9 +78,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-sizing: border-box;
 }
-.pokemon-sprite {
-    align-self: center;
+#pokemon-sprite {
+    max-width: 100px;
+    max-height: 100px;
+
+    height: auto;
+    width: auto;
+
+    object-fit: contain;
 }
 
 /* ----- Right Side ----- */
@@ -89,8 +96,11 @@ body {
 .right-screen {
     width: 50%;
 
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
+    align-self: center;
     gap: 10px;
 }
 
@@ -107,7 +117,6 @@ body {
     display: flex;
     align-items: center;
     justify-self: center;
-    align-self: flex-end;
     gap: 5px;
 
     font-family: "Press Start 2P";
@@ -130,7 +139,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
     gap: 5px;
 }
 
