@@ -34,7 +34,7 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 **Contributors:** Evan Nartea
 <br>
 <br>
-Pokémon information: https://pokeapi.co
+Pokémon data: https://pokeapi.co
 <br>
 Pokémon type icons: https://archives.bulbagarden.net/wiki/Category:Type_icons
 <br>
