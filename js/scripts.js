@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const pokemonSprite = document.getElementById("pokemon-sprite");
     const pokemonCry = document.getElementById("pokemon-cry");
 
+    const bgMusic = document.getElementById("background-music");
+
     let currentId = null;
     const MAX_POKEMON = 1025;
     
@@ -86,12 +88,40 @@ document.addEventListener("DOMContentLoaded", function() {
         pokemonCry.play();
     }
 
+    //Render easter egg
+    function easterEgg() {
+        bgMusic.pause();
+        bgMusic.currentTime = 0;
+
+        name.textContent = "King of Pop"
+        hp.textContent = "MAX"
+        attack.textContent = "MAX"
+        defense.textContent = "MAX"
+        spAttack.textContent = "MAX"
+        spDefense.textContent = "MAX"
+        speed.textContent = "MAX"
+
+        type1Icon.src = "images/types/UnknownIC_Colo.png";
+        type2Icon.style.display = "none";
+
+        pokemonSprite.src = "images/michael-jackson.gif";
+        
+        pokemonCry.src = "audio/8bit_smooth_criminal.mp3";
+        pokemonCry.play()
+    }
+
     // Return Pokemon after user input
     form.addEventListener("submit", async function(event) {
         event.preventDefault();
 
         const query = input.value.trim().toLowerCase();
-        await getPokemon(query);
+
+        if (query === "michael jackson") {
+            easterEgg();
+        }
+        else {
+            await getPokemon(query);
+        }
     });
 
     // Reset button
