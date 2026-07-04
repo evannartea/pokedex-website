@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
         bgMusic.currentTime = 0;
 
         pokedexNo.textContent= "";
-
         name.textContent = "KING OF POP"
+        
         hp.textContent = "MAX"
         attack.textContent = "MAX"
         defense.textContent = "MAX"
