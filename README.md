@@ -38,4 +38,6 @@ Pokémon information: https://pokeapi.co
 <br>
 Pokémon type icons: https://archives.bulbagarden.net/wiki/Category:Type_icons
 <br>
+Pokémon music: https://downloads.khinsider.com
+<br>
 This project was inspired by: https://github.com/MilenaMartini/pokedexJs
