@@ -1,5 +1,5 @@
 <div style="display: flex; align-items: center; gap: 20px;">
-  <img src="images/Poké_Ball_icon.svg.png" height="100" width="100">
+  <img src="images/poke_ball_icon.svg.png" height="100" width="100">
   <img src="images/pokemon-logo.svg.png" height="150" width="300">
 </div>
 
