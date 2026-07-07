@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Pokédex</title>
 
         <!-- Favicon -->
-        <link rel="icon" href="images/poke_ball_icon.svg.png">
+        <link rel='icon' href='images/poke_ball_icon.svg.png'>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel='preconnect' href='https://fonts.googleapis.com'>
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+        <link href='https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel='preconnect' href='https://fonts.googleapis.com'>
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+        <link href='https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap' rel='stylesheet'>
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel='stylesheet' href='css/styles.css'>
 
         <!-- Custom JS -->
-        <script src="js/scripts.js"></script>
+        <script src='js/scripts.js'></script>
     </head>
     <body>
-        <div class="grid-container">
+        <div class='grid-container'>
 
             <!-- Header -->
-            <header class="header">
-                <img src="images/pokemon-logo.svg.png" alt="Pokemon Logo" height="150" width="400">
+            <header class='header'>
+                <img src='images/pokemon-logo.svg.png' alt='Pokemon Logo' height='150' width='400'>
             </header>
             <!-- End Header -->
             
             <!-- Main -->
-            <main class="main-container">
-                <div class="pokedex-wrapper">
-                    <img src="images/pokedex-image.png" alt="Pokedex Image">
+            <main class='main-container'>
+                <div class='pokedex-wrapper'>
+                    <img src='images/pokedex-image.png' alt='Pokedex Image'>
 
                     <!-- Screen -->
-                    <div class="screen-wrapper">
-                        <div class="left-screen">
-                            <img id="pokemon-sprite" src="">
+                    <div class='screen-wrapper'>
+                        <div class='left-screen'>
+                            <img id='pokemon-sprite' src=''>
                         </div>
 
-                        <div class="right-screen">
-                            <div class="name-bar">
-                                <span id="pokedex-number"></span>
-                                <span id="name"></span>
+                        <div class='right-screen'>
+                            <div class='name-bar'>
+                                <span id='pokedex-number'></span>
+                                <span id='name'></span>
                             </div>
                             
-                            <div class="stats-bar">
-                                <div class="stats-row">
-                                    TYPE: <img id="type1" class="type-icon"><img id="type2" class="type-icon">
+                            <div class='stats-bar'>
+                                <div class='stats-row'>
+                                    TYPE: <img id='type1' class='type-icon'><img id='type2' class='type-icon'>
                                 </div>
-                                <div class="stats-row">HP : <span id="hp"></span></div>
-                                <div class="stats-row">ATK: <span id="attack"></span></div>
-                                <div class="stats-row">DEF: <span id="defense"></span></div>
-                                <div class="stats-row">SpA: <span id="sp-attack"></span></div>
-                                <div class="stats-row">SpD: <span id="sp-defense"></span></div>
-                                <div class="stats-row">SPE: <span id="speed"></span></div>
+                                <div class='stats-row'>HP : <span id='hp'></span></div>
+                                <div class='stats-row'>ATK: <span id='attack'></span></div>
+                                <div class='stats-row'>DEF: <span id='defense'></span></div>
+                                <div class='stats-row'>SpA: <span id='sp-attack'></span></div>
+                                <div class='stats-row'>SpD: <span id='sp-defense'></span></div>
+                                <div class='stats-row'>SPE: <span id='speed'></span></div>
                             </div>
 
                         </div>
@@ -67,30 +67,30 @@
                     </div>
 
                     <!-- Decorations -->
-                    <span id="red-circle" class="absolute"></span>
-                    <span id="black-lines" class="absolute"></span>
-                    <span id="red-line" class="absolute"></span>
-                    <span id="blue-line" class="absolute"></span>
+                    <span id='red-circle' class='absolute'></span>
+                    <span id='black-lines' class='absolute'></span>
+                    <span id='red-line' class='absolute'></span>
+                    <span id='blue-line' class='absolute'></span>
 
                     <!--Search Form -->
-                    <form id="search-wrapper" class="absolute">
-                        <input id="search-box" type="text" placeholder="SEARCH POKéMON">
+                    <form id='search-wrapper' class='absolute'>
+                        <input id='search-box' type='text' placeholder='SEARCH POKéMON'>
                     </form>
 
                     <!-- Buttons -->
-                    <button id="reset-button" class="absolute" type="button">RESET</button>
-                    <button id="prev-button" class="absolute" type="button">◀</button>
-                    <button id="next-button" class="absolute" type="button">▶</button>
+                    <button id='reset-button' class='absolute' type='button'>RESET</button>
+                    <button id='prev-button' class='absolute' type='button'>◀</button>
+                    <button id='next-button' class='absolute' type='button'>▶</button>
                 </div>
 
                 <!-- Pokemon Cry -->
-                <audio id="pokemon-cry" src="" preload="auto"></audio>
+                <audio id='pokemon-cry' src='' preload='auto'></audio>
             </main>
             <!-- End Main -->
         </div>
         <!-- Audio -->
-        <audio id="background-music" autoplay loop>
-            <source src="audio/emerald_littleroot_town.mp3" type="audio/mpeg">
+        <audio id='background-music' autoplay loop>
+            <source src='audio/emerald_littleroot_town.mp3' type='audio/mpeg'>
         </audio>
     </body>
 </html>
