@@ -27,6 +27,10 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 - Learned how to fetch and work with data from a RESTful API.
 - Gained experience with version control using Git commands.
 
+### 📝 Notes
+#
+- This project was initially developed by combining data from multiple sources: a raw dataset from <a href="https://www.kaggle.com/datasets/rounakbanik/pokemon">Kaggle</a> for Pokémon stats, <a href="https://projectpokemon.org/home/docs/spriteindex_148/3d-models-generation-1-pokémon-r90/">Project Pokémon</a> for Pokémon sprites, and <a href="https://play.pokemonshowdown.com/audio/cries/">Pokémon Showdown</a> for Pokémon cries. However, this approach proved to be problematic because the data sources were not centralised, resulting in inconsitencies between the datasets. For example, "MrMime" vs. "Mr.Mime", and some base stats were inaccurate because they reflected Mega Evolution stats instead.
+
 ### 📄 Credits
 #
 **Author:** Evan Nartea<br>
