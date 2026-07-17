@@ -29,15 +29,10 @@ Users can search by Pokémon name or National Pokédex Number and toggle between
 
 ### 📄 Credits
 #
-**Author:** Evan Nartea
+**Author:** Evan Nartea<br>
+**Contributors:** Evan Nartea<br>
 <br>
-**Contributors:** Evan Nartea
-<br>
-<br>
-Pokémon data: https://pokeapi.co
-<br>
-Pokémon type icons: https://archives.bulbagarden.net/wiki/Category:Type_icons
-<br>
-Pokémon music: https://downloads.khinsider.com
-<br>
+Pokémon data: https://pokeapi.co<br>
+Pokémon type icons: https://archives.bulbagarden.net/wiki/Category:Type_icons<br>
+Pokémon music: https://downloads.khinsider.com<br>
 This project was inspired by: https://github.com/MilenaMartini/pokedexJs
