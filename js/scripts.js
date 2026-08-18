@@ -123,6 +123,8 @@ document.addEventListener("DOMContentLoaded", function() {
         else {
             await getPokemon(query);
         }
+        
+        input.value = ""
     });
 
     // Reset button
