@@ -1,7 +1,7 @@
-<div style="display: flex; align-items: center; gap: 20px;">
+<p align="center">
   <img src="images/poke_ball_icon.svg.png" height="150" width="150">
   <img src="images/pokemon-logo.svg.png" height="1280" width="470">
-</div>
+</p>
 
 # Pokédex Website
 [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
