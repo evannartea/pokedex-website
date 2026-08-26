@@ -14,7 +14,7 @@
 This is a beginner-level web project that allows users to search for Pokémon and view basic stats, including 3D Pokémon sprites and Pokémon cries.
 Users can search by Pokémon name or National Pokédex Number and toggle between Pokémon using left and right arrow keys.
 
-### 📷 Example
+### 📷 Preview
 #
 <img width="1710" height="982" alt="screenshot_searched" src="images/screenshot_searched.png"/>
 
