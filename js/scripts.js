@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         spDefense.textContent = "MAX"
         speed.textContent = "MAX"
 
-        type1Icon.src = "images/types/UnknownIC_Colo.png";
+        type1Icon.src = "images/types/unknownIC_Colo.png";
         type2Icon.style.display = "none";
 
         pokemonSprite.src = "images/michael-jackson.gif";
